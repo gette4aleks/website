@@ -1,0 +1,324 @@
+body{
+    margin: 0;
+    font-family:'Montserrat', sans-serif;
+    font-family: 'Kaushan Script',cursive;
+    
+    font-size: 15px;
+    line-height: 1.6;
+    color:#24305E;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/*Container*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*Intro*/
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    background: url("../images/intro.jpg") center no-repeat;
+    
+    -webkit-background-size:cover;
+    background-size: cover;   
+}
+
+
+.intro__inner {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.intro__title {
+    margin-bottom: 20px;
+    color: #24305E;
+    font-size: 80px;
+    font-weight: 300;
+    
+    text-align: center;
+    line-height: 1;
+}
+
+
+.intro__subtitle {
+    font-size: 32px;
+    color: #24305E;
+}
+
+
+.intro__subtitle:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 40px auto;
+
+    background-color: #24305E;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 300;
+}
+
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #24305E;
+   
+}
+
+
+/* Nav */
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    position: fixed;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #24305E;
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #F76C6C;
+    opacity: 0;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+}
+
+
+.nav__link:hover {
+    color: #F76C6C;
+}
+
+
+.nav__link:hover:after{
+    opacity: 1;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border: 3px solid #24305E;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #24305E;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+    background-color: #24305E;
+    color: #F76C6C;
+}
+
+
+/* Section */
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.section--gray{
+    background: #A8D0E6;
+}
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #24305E;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #24305E;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section__title__interests{
+    font-size: 25px;
+    font-weight: 700;
+    color: #374785;
+    text-align: center; 
+}
+
+.section__contact{
+    background: #F8E9A1;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 20px auto;
+
+    background-color: #F76C6C;
+}
+
+.section__text {
+    font-size: 20px;
+    color: #374785;
+    padding-top: 150px;
+}
+
+.text__interests{
+    font-size: 20px;
+    color: #374785; 
+}
+
+
+
+/*Foto*/
+.foto{
+    float:left;
+    margin: 4px 10px 2px 150px;
+    padding:6px;
+}
+
+/*Interests*/
+.interests{
+    display: flex;
+}
+
+
+.interests__item{
+    height: 40%;
+}
+
+.left-col, /* левая колонка */
+.right-col/* правая колонка */
+{
+    width: 50%;    /* ширина */
+    min-width: 200px;  /* минимальная ширина сужения */
+    height: auto;  /* высота */
+    box-sizing: border-box;
+    float: left; /* плавающие блоки */
+}
+.left-col{
+    padding-right: 40px; /* отступ справа */
+    text-align: center;
+}
+.right-col{
+    padding-left: 40px; /* отступ слева */
+    text-align: center;
+}
+
+/*Стили для адаптивных картинок*/
+.img-responsive{
+    display: block;
+    max-width: 100%; /* ширина, размеры в процентах*/
+    height: auto;
+    margin: 20px 0px; /* отступы сверху и снизу */
+    background: #fff; /* для красоты цвет заполнения  */
+    padding: 4px;  /* для красоты внутренние отступы */
+    border: 1px solid #ddd; /* для красоты рамка серым цветом */
+}
+
+
+/* clearfix сбрасывает float*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.portfolio{
+    text-align: center;
+}
+
+.mail{
+   font-size: 20px;
+    color: #374785;
+    padding-top: 150px;
+    margin-bottom: 150;
+}
+
+.Сontact{
+    text-align: center;
+     margin-bottom: 150;
+}
+
+
+
+
+
+
+
